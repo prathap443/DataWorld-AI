@@ -63,6 +63,11 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
+                name: "Prathap",
+                role: "CEO & Founder",
+                img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+              },
+              {
                 name: "Sarah Chen",
                 role: "Chief Data Scientist",
                 img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
@@ -71,11 +76,6 @@ export default function About() {
                 name: "Michael Ross",
                 role: "Head of Engineering",
                 img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop"
-              },
-              {
-                name: "Elena Rodriguez",
-                role: "Lead AI Instructor",
-                img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
               }
             ].map((member, i) => (
               <div key={i} className="group text-center">

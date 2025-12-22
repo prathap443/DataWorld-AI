@@ -54,17 +54,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg">Our Location</p>
-                    <p className="text-slate-400">123 Tech Park, Innovation Blvd<br />Silicon Valley, CA 94025</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="bg-primary/20 p-3 rounded-lg text-primary">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-lg">Phone Number</p>
-                    <p className="text-slate-400">+1 (555) 123-4567</p>
+                    <p className="text-slate-400">20-22 Wenlock Road<br />London, England, N1 7GU</p>
                   </div>
                 </div>
 
@@ -74,7 +64,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg">Email Address</p>
-                    <p className="text-slate-400">hello@dataworld.ai</p>
+                    <p className="text-slate-400">prathap443@gmail.com</p>
                   </div>
                 </div>
               </div>
