@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 interface ServiceCardProps {
   icon: ReactNode;
@@ -32,9 +33,11 @@ export function ServiceCard({ icon, title, description, features }: ServiceCardP
           ))}
         </ul>
 
-        <button className="flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
-          Learn More <ArrowRight className="w-4 h-4" />
-        </button>
+        <Link href="/services">
+          <div className="flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all cursor-pointer">
+            Learn More <ArrowRight className="w-4 h-4" />
+          </div>
+        </Link>
       </div>
     </div>
   );

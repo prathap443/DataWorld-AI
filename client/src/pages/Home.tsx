@@ -137,35 +137,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials / Social Proof */}
-      <section className="py-24">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="bg-slate-900 rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-            
-            <div className="relative z-10 max-w-3xl mx-auto">
-              <div className="mb-8 flex justify-center text-accent">
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <svg key={s} className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                ))}
-              </div>
-              <h2 className="text-3xl md:text-5xl font-display font-bold mb-8">
-                "DataWorld transformed our raw data into actionable insights that drove a 30% revenue increase in just one quarter."
-              </h2>
-              <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-slate-700 rounded-full mb-4 overflow-hidden border-2 border-primary">
-                  {/* Unsplash User Portrait */}
-                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="CEO" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg">Alex Johnson</h4>
-                  <p className="text-slate-400">CTO, TechGrowth Solutions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-b from-white to-slate-50">
