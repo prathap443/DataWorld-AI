@@ -51,48 +51,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="mb-24">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet The Experts</h2>
-            <p className="text-lg text-muted-foreground">
-              A diverse team of data scientists, engineers, and strategists.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Prathap",
-                role: "CEO & Founder",
-                img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
-              },
-              {
-                name: "Sarah Chen",
-                role: "Chief Data Scientist",
-                img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
-              },
-              {
-                name: "Michael Ross",
-                role: "Head of Engineering",
-                img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop"
-              }
-            ].map((member, i) => (
-              <div key={i} className="group text-center">
-                <div className="relative mb-6 inline-block">
-                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/40 transition-all duration-300"></div>
-                  <img 
-                    src={member.img} 
-                    alt={member.name} 
-                    className="relative w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-xl font-bold">{member.name}</h3>
-                <p className="text-primary font-medium">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </main>
 
       <Footer />
