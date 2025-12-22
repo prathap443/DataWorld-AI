@@ -8,36 +8,42 @@ import { motion } from "framer-motion";
 export default function Services() {
   const services = [
     {
+      key: "ai",
       icon: <Brain className="w-8 h-8" />,
       title: "AI & Machine Learning",
       description: "Develop intelligent systems that learn, adapt, and automate complex tasks to drive efficiency.",
       features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Recommendation Systems"]
     },
     {
+      key: "data_engineering",
       icon: <Server className="w-8 h-8" />,
       title: "Data Engineering",
       description: "Build robust data pipelines and architectures that handle massive scale with reliability.",
       features: ["ETL/ELT Pipeline Design", "Data Warehouse Modernization", "Real-time Streaming", "Database Optimization"]
     },
     {
+      key: "data_analytics",
       icon: <BarChart className="w-8 h-8" />,
       title: "Data Analytics",
       description: "Turn raw numbers into visual stories and actionable insights for better decision making.",
       features: ["Business Intelligence Dashboards", "Statistical Analysis", "Data Mining", "Reporting Automation"]
     },
     {
+      key: "custom_dev",
       icon: <Code className="w-8 h-8" />,
       title: "Custom Development",
       description: "Tailored software solutions integrating data capabilities directly into your workflows.",
       features: ["API Development", "Microservices Architecture", "Integration Services", "Legacy Modernization"]
     },
     {
+      key: "cloud",
       icon: <Globe className="w-8 h-8" />,
       title: "Cloud Solutions",
       description: "Leverage the power of cloud computing for scalable, cost-effective data storage and processing.",
       features: ["Cloud Migration", "Serverless Architecture", "Multi-cloud Strategy", "Cost Optimization"]
     },
     {
+      key: "governance",
       icon: <ShieldCheck className="w-8 h-8" />,
       title: "Data Governance",
       description: "Ensure your data is secure, compliant, and maintained at the highest quality standards.",
@@ -63,7 +69,11 @@ export default function Services() {
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
-              {...service}
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+              features={service.features}
+              serviceKey={service.key}
             />
           ))}
         </motion.div>

@@ -47,8 +47,8 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href}>
                 <span
-                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                    location === link.href ? "text-primary font-semibold" : "text-foreground/80"
+                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer pb-1 border-b-2 ${
+                    location === link.href ? "text-primary font-semibold border-primary" : "text-foreground/80 border-transparent"
                   }`}
                 >
                   {link.name}

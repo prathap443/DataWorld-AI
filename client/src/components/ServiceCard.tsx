@@ -7,9 +7,10 @@ interface ServiceCardProps {
   title: string;
   description: string;
   features: string[];
+  serviceKey: string;
 }
 
-export function ServiceCard({ icon, title, description, features }: ServiceCardProps) {
+export function ServiceCard({ icon, title, description, features, serviceKey }: ServiceCardProps) {
   return (
     <div className="group relative bg-card p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -33,7 +34,7 @@ export function ServiceCard({ icon, title, description, features }: ServiceCardP
           ))}
         </ul>
 
-        <Link href="/services">
+        <Link href={`/services/${serviceKey}`}>
           <div className="flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all cursor-pointer">
             Learn More <ArrowRight className="w-4 h-4" />
           </div>
