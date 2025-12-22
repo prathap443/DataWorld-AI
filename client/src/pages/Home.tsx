@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Brain, Database, LineChart, Code2, Users, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import aiImagePath from "@assets/stock_images/ai_artificial_intell_6d1c9ce2.jpg";
 
 export default function Home() {
   const containerVariants = {
@@ -69,11 +70,11 @@ export default function Home() {
               className="relative hidden lg:block"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-3xl transform rotate-3" />
-              {/* Unsplash Abstract Tech Image */}
+              {/* AI & Data Visualization */}
               <img 
-                src="https://pixabay.com/get/g498ed0f726bd3f22776d1df106380ff29e67e3fc89a2f4bfe6ed6483f7925e609a89c8d335078582b1022b7de0a6942ca393214fc66722a80795601c01022f9e_1280.jpg" 
-                alt="Data Visualization" 
-                className="relative rounded-3xl shadow-2xl border border-white/20"
+                src={aiImagePath}
+                alt="AI & Data Visualization" 
+                className="relative rounded-3xl shadow-2xl border border-white/20 w-full h-auto object-cover"
               />
               
               {/* Floating Stats Card */}
