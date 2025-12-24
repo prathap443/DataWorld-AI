@@ -5,6 +5,9 @@ import { ArrowRight, Brain, Database, LineChart, Code2, Users, CheckCircle2 } fr
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import aiImagePath from "@assets/stock_images/ai_artificial_intell_6d1c9ce2.jpg";
+import neuralNet1 from "@assets/stock_images/neural_network_machi_745707c9.jpg";
+import neuralNet2 from "@assets/stock_images/neural_network_machi_f9af290d.jpg";
+import neuralNet3 from "@assets/stock_images/neural_network_machi_61c0bfd4.jpg";
 
 export default function Home() {
   const containerVariants = {
@@ -113,28 +116,94 @@ export default function Home() {
               {
                 icon: <Brain className="w-8 h-8" />,
                 title: "AI Development",
-                desc: "Custom AI models and machine learning solutions tailored to your business needs."
+                desc: "Custom AI models and machine learning solutions tailored to your business needs.",
+                image: neuralNet1
               },
               {
                 icon: <Database className="w-8 h-8" />,
                 title: "Data Architecture",
-                desc: "Scalable, secure, and efficient data infrastructure design and implementation."
+                desc: "Scalable, secure, and efficient data infrastructure design and implementation.",
+                image: neuralNet2
               },
               {
                 icon: <Code2 className="w-8 h-8" />,
                 title: "Data Engineering",
-                desc: "Robust pipelines for ETL, data warehousing, and real-time processing."
+                desc: "Robust pipelines for ETL, data warehousing, and real-time processing.",
+                image: neuralNet3
               }
             ].map((item, i) => (
-              <motion.div key={i} variants={itemVariants} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
-                <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6">
-                  {item.icon}
+              <motion.div key={i} variants={itemVariants} className="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all overflow-hidden group">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-muted-foreground">{item.desc}</p>
+                <div className="p-8 pt-6">
+                  <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.desc}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Tech Showcase Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Cutting-Edge Technology Stack</h2>
+            <p className="text-lg text-muted-foreground">
+              We leverage the latest AI and data technologies to deliver superior solutions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative rounded-2xl overflow-hidden shadow-lg"
+            >
+              <img 
+                src={neuralNet2}
+                alt="Machine Learning Technology" 
+                className="w-full h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20" />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col justify-center"
+            >
+              <h3 className="text-2xl font-bold mb-6">Advanced AI & Data Solutions</h3>
+              <ul className="space-y-4">
+                {[
+                  "Deep Learning & Neural Networks",
+                  "Cloud-Native Architecture",
+                  "Real-time Data Processing",
+                  "Scalable Infrastructure",
+                  "Enterprise-Grade Security"
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span className="text-foreground/80">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
         </div>
       </section>
 
