@@ -80,7 +80,7 @@ function CourseCard({ title, level, duration, description, modules, popular, bgI
           </Button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
