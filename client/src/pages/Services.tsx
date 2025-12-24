@@ -93,52 +93,89 @@ export default function Services() {
         </motion.div>
 
         {/* Tech Stack Section */}
-        <div className="mt-32 mb-24">
+        <motion.div 
+          className="mt-32 mb-24"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Technology Arsenal</h2>
-            <p className="text-lg text-muted-foreground">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-bold mb-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              Our Technology Arsenal
+            </motion.h2>
+            <motion.p 
+              className="text-lg text-muted-foreground"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
               Enterprise-grade tools and platforms we use to deliver cutting-edge solutions.
-            </p>
+            </motion.p>
           </div>
 
-          <div 
+          <motion.div 
             className="relative rounded-2xl overflow-hidden bg-cover bg-center"
             style={{ backgroundImage: `url(${analyticsBg})` }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.4 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 to-slate-900/80" />
+            <motion.div 
+              className="absolute inset-0 bg-gradient-to-r from-slate-900/95 to-slate-900/80"
+              animate={{ opacity: [0.95, 0.98, 0.95] }}
+              transition={{ duration: 4, repeat: Infinity }}
+            />
             <div className="relative z-10 p-12 md:p-16">
               <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="text-white">
-                  <h3 className="font-bold text-lg mb-4">Cloud & Infrastructure</h3>
-                  <ul className="space-y-2 text-sm text-slate-200">
-                    <li>• AWS & Google Cloud</li>
-                    <li>• Snowflake & BigQuery</li>
-                    <li>• Databricks</li>
-                    <li>• Kubernetes & Docker</li>
-                  </ul>
-                </div>
-                <div className="text-white">
-                  <h3 className="font-bold text-lg mb-4">AI & Analytics</h3>
-                  <ul className="space-y-2 text-sm text-slate-200">
-                    <li>• TensorFlow & PyTorch</li>
-                    <li>• LLMs & Prompt Engineering</li>
-                    <li>• Advanced Analytics</li>
-                    <li>• Real-time Processing</li>
-                  </ul>
-                </div>
-                <div className="text-white">
-                  <h3 className="font-bold text-lg mb-4">Data Pipeline & Tools</h3>
-                  <ul className="space-y-2 text-sm text-slate-200">
-                    <li>• Apache Spark & Kafka</li>
-                    <li>• dbt & Airflow</li>
-                    <li>• Tableau & PowerBI</li>
-                    <li>• Python & SQL</li>
-                  </ul>
-                </div>
+                {[
+                  {
+                    title: "Cloud & Infrastructure",
+                    items: ["• AWS & Google Cloud", "• Snowflake & BigQuery", "• Databricks", "• Kubernetes & Docker"]
+                  },
+                  {
+                    title: "AI & Analytics",
+                    items: ["• TensorFlow & PyTorch", "• LLMs & Prompt Engineering", "• Advanced Analytics", "• Real-time Processing"]
+                  },
+                  {
+                    title: "Data Pipeline & Tools",
+                    items: ["• Apache Spark & Kafka", "• dbt & Airflow", "• Tableau & PowerBI", "• Python & SQL"]
+                  }
+                ].map((column, idx) => (
+                  <motion.div 
+                    key={idx}
+                    className="text-white"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                  >
+                    <h3 className="font-bold text-lg mb-4">{column.title}</h3>
+                    <ul className="space-y-2 text-sm text-slate-200">
+                      {column.items.map((item, i) => (
+                        <motion.li 
+                          key={i}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: (idx * 0.1) + (i * 0.05) }}
+                        >
+                          {item}
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Process Section */}
         <div className="mt-32">

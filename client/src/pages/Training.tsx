@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, Clock, Calendar, Users, Zap } from "lucide-react";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import techBgImage from "@assets/stock_images/tech_background_data_2c16e47e.jpg";
 import neuralNetworkBg from "@assets/stock_images/neural_network_ai_ma_0c31227c.jpg";
 import machineryBg1 from "@assets/stock_images/machinery_industrial_8afc6895.jpg";
@@ -19,19 +20,29 @@ interface CourseCardProps {
   modules: string[];
   popular?: boolean;
   bgImage?: string;
+  index?: number;
 }
 
-function CourseCard({ title, level, duration, description, modules, popular, bgImage }: CourseCardProps) {
+function CourseCard({ title, level, duration, description, modules, popular, bgImage, index = 0 }: CourseCardProps) {
   return (
-    <div className={`flex flex-col h-full bg-card rounded-2xl border ${popular ? 'border-primary shadow-xl shadow-primary/10 ring-2 ring-primary/20' : 'border-border shadow-sm hover:shadow-lg'} transition-all duration-300 overflow-hidden`}>
+    <motion.div 
+      className={`flex flex-col h-full bg-card rounded-2xl border ${popular ? 'border-primary shadow-xl shadow-primary/10 ring-2 ring-primary/20' : 'border-border shadow-sm hover:shadow-lg'} transition-all duration-300 overflow-hidden`}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -5 }}
+      transition={{ duration: 0.3, delay: index * 0.1 }}
+    >
       {/* Background Image Section */}
       {bgImage && (
-        <div 
-          className="w-full h-40 bg-cover bg-center relative"
+        <motion.div 
+          className="w-full h-40 bg-cover bg-center relative overflow-hidden"
           style={{ backgroundImage: `url(${bgImage})` }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.4 }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
-        </div>
+        </motion.div>
       )}
 
       <div className="p-8 flex flex-col flex-grow">
@@ -99,7 +110,21 @@ export default function Training() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <motion.div 
+          className="grid md:grid-cols-2 xl:grid-cols-2 gap-8 max-w-6xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1
+              }
+            }
+          }}
+        >
           <CourseCard 
             title="Data Engineering Bootcamp"
             level="Intermediate"
@@ -114,6 +139,7 @@ export default function Training() {
             ]}
             popular={true}
             bgImage={machineryBg1}
+            index={0}
           />
 
           <CourseCard 
@@ -129,6 +155,7 @@ export default function Training() {
               "AI Ethics & Governance"
             ]}
             bgImage={neuralNetworkBg}
+            index={1}
           />
 
           <CourseCard 
@@ -144,6 +171,7 @@ export default function Training() {
               "SQL for Analysts"
             ]}
             bgImage={engineerBg}
+            index={2}
           />
 
           <CourseCard 
@@ -159,11 +187,18 @@ export default function Training() {
               "System Scalability & Performance"
             ]}
             bgImage={machineryBg2}
+            index={3}
           />
-        </div>
+        </motion.div>
 
         {/* Tech Stack Section */}
-        <div className="mt-32 mb-24">
+        <motion.div 
+          className="mt-32 mb-24"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Technology Stack We Teach</h2>
             <p className="text-lg text-muted-foreground">
@@ -208,7 +243,7 @@ export default function Training() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Corporate Training CTA */}
         <div className="mt-32 bg-slate-900 rounded-3xl p-12 text-center text-white relative overflow-hidden">
