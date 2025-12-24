@@ -8,20 +8,31 @@ interface ServiceCardProps {
   description: string;
   features: string[];
   serviceKey: string;
+  bgImage?: string;
 }
 
-export function ServiceCard({ icon, title, description, features, serviceKey }: ServiceCardProps) {
+export function ServiceCard({ icon, title, description, features, serviceKey, bgImage }: ServiceCardProps) {
   return (
-    <div className="group relative bg-card p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+    <div className="group relative bg-card rounded-2xl border border-border/50 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+      {/* Background Image Section */}
+      {bgImage && (
+        <div 
+          className="w-full h-40 bg-cover bg-center relative"
+          style={{ backgroundImage: `url(${bgImage})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
+        </div>
+      )}
+
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
       
-      <div className="relative z-10">
+      <div className="relative z-10 p-8 flex-grow flex flex-col">
         <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
           {icon}
         </div>
         
         <h3 className="text-xl font-bold mb-3 text-foreground">{title}</h3>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
+        <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">
           {description}
         </p>
 

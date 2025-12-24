@@ -7,6 +7,9 @@ import { Check, Clock, Calendar, Users, Zap } from "lucide-react";
 import { Link } from "wouter";
 import techBgImage from "@assets/stock_images/tech_background_data_2c16e47e.jpg";
 import neuralNetworkBg from "@assets/stock_images/neural_network_ai_ma_0c31227c.jpg";
+import machineryBg1 from "@assets/stock_images/machinery_industrial_8afc6895.jpg";
+import machineryBg2 from "@assets/stock_images/machinery_industrial_b175bbc4.jpg";
+import engineerBg from "@assets/stock_images/engineer_technical_p_76488efb.jpg";
 
 interface CourseCardProps {
   title: string;
@@ -15,44 +18,57 @@ interface CourseCardProps {
   description: string;
   modules: string[];
   popular?: boolean;
+  bgImage?: string;
 }
 
-function CourseCard({ title, level, duration, description, modules, popular }: CourseCardProps) {
+function CourseCard({ title, level, duration, description, modules, popular, bgImage }: CourseCardProps) {
   return (
-    <div className={`flex flex-col h-full bg-card rounded-2xl p-8 border ${popular ? 'border-primary shadow-xl shadow-primary/10 ring-2 ring-primary/20' : 'border-border shadow-sm hover:shadow-lg'} transition-all duration-300`}>
-      {popular && (
-        <div className="mb-4">
-          <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0 px-3 py-1">Most Popular</Badge>
+    <div className={`flex flex-col h-full bg-card rounded-2xl border ${popular ? 'border-primary shadow-xl shadow-primary/10 ring-2 ring-primary/20' : 'border-border shadow-sm hover:shadow-lg'} transition-all duration-300 overflow-hidden`}>
+      {/* Background Image Section */}
+      {bgImage && (
+        <div 
+          className="w-full h-40 bg-cover bg-center relative"
+          style={{ backgroundImage: `url(${bgImage})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
         </div>
       )}
-      
-      <div className="mb-6">
-        <h3 className="text-2xl font-bold mb-2 text-foreground">{title}</h3>
-        <div className="flex items-center gap-4 text-sm text-muted-foreground">
-          <span className="flex items-center gap-1"><Zap className="w-4 h-4" /> {level}</span>
-          <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {duration}</span>
-        </div>
-      </div>
 
-      <p className="text-muted-foreground mb-8 flex-grow">
-        {description}
-      </p>
-
-      <div className="space-y-3 mb-8">
-        <p className="text-sm font-semibold text-foreground">What you'll learn:</p>
-        {modules.map((mod, i) => (
-          <div key={i} className="flex items-start gap-2 text-sm text-slate-600">
-            <Check className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-            <span>{mod}</span>
+      <div className="p-8 flex flex-col flex-grow">
+        {popular && (
+          <div className="mb-4">
+            <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0 px-3 py-1">Most Popular</Badge>
           </div>
-        ))}
-      </div>
+        )}
+        
+        <div className="mb-6">
+          <h3 className="text-2xl font-bold mb-2 text-foreground">{title}</h3>
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <span className="flex items-center gap-1"><Zap className="w-4 h-4" /> {level}</span>
+            <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {duration}</span>
+          </div>
+        </div>
 
-      <Link href="/contact">
-        <Button className={`w-full py-6 text-lg ${popular ? '' : 'variant-outline'}`}>
-          Enroll Now
-        </Button>
-      </Link>
+        <p className="text-muted-foreground mb-8 flex-grow">
+          {description}
+        </p>
+
+        <div className="space-y-3 mb-8">
+          <p className="text-sm font-semibold text-foreground">What you'll learn:</p>
+          {modules.map((mod, i) => (
+            <div key={i} className="flex items-start gap-2 text-sm text-slate-600">
+              <Check className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
+              <span>{mod}</span>
+            </div>
+          ))}
+        </div>
+
+        <Link href="/contact">
+          <Button className={`w-full py-6 text-lg ${popular ? '' : 'variant-outline'}`}>
+            Enroll Now
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }
@@ -97,6 +113,7 @@ export default function Training() {
               "Data Modeling & Architecture"
             ]}
             popular={true}
+            bgImage={machineryBg1}
           />
 
           <CourseCard 
@@ -111,6 +128,7 @@ export default function Training() {
               "Model Deployment & MLOps",
               "AI Ethics & Governance"
             ]}
+            bgImage={neuralNetworkBg}
           />
 
           <CourseCard 
@@ -125,6 +143,7 @@ export default function Training() {
               "Business Intelligence Strategy",
               "SQL for Analysts"
             ]}
+            bgImage={engineerBg}
           />
 
           <CourseCard 
@@ -139,6 +158,7 @@ export default function Training() {
               "Cloud Infrastructure Design",
               "System Scalability & Performance"
             ]}
+            bgImage={machineryBg2}
           />
         </div>
 

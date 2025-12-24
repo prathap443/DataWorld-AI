@@ -6,6 +6,10 @@ import { Brain, Code, BarChart, Server, Globe, ShieldCheck } from "lucide-react"
 import { motion } from "framer-motion";
 import techBgImage from "@assets/stock_images/tech_background_data_7f3259ae.jpg";
 import analyticsBg from "@assets/stock_images/data_analytics_progr_f19847a2.jpg";
+import machineryBg1 from "@assets/stock_images/machinery_industrial_8afc6895.jpg";
+import machineryBg2 from "@assets/stock_images/machinery_industrial_b175bbc4.jpg";
+import engineerBg from "@assets/stock_images/engineer_technical_p_76488efb.jpg";
+import dataBg from "@assets/stock_images/data_analytics_progr_09aa2600.jpg";
 
 export default function Services() {
   const services = [
@@ -14,42 +18,48 @@ export default function Services() {
       icon: <Brain className="w-8 h-8" />,
       title: "AI & Machine Learning",
       description: "Develop intelligent systems that learn, adapt, and automate complex tasks to drive efficiency.",
-      features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Recommendation Systems"]
+      features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Recommendation Systems"],
+      bgImage: machineryBg1
     },
     {
       key: "data_engineering",
       icon: <Server className="w-8 h-8" />,
       title: "Data Engineering",
       description: "Build robust data pipelines and architectures that handle massive scale with reliability.",
-      features: ["ETL/ELT Pipeline Design", "Data Warehouse Modernization", "Real-time Streaming", "Database Optimization"]
+      features: ["ETL/ELT Pipeline Design", "Data Warehouse Modernization", "Real-time Streaming", "Database Optimization"],
+      bgImage: machineryBg2
     },
     {
       key: "data_analytics",
       icon: <BarChart className="w-8 h-8" />,
       title: "Data Analytics",
       description: "Turn raw numbers into visual stories and actionable insights for better decision making.",
-      features: ["Business Intelligence Dashboards", "Statistical Analysis", "Data Mining", "Reporting Automation"]
+      features: ["Business Intelligence Dashboards", "Statistical Analysis", "Data Mining", "Reporting Automation"],
+      bgImage: engineerBg
     },
     {
       key: "custom_dev",
       icon: <Code className="w-8 h-8" />,
       title: "Custom Development",
       description: "Tailored software solutions integrating data capabilities directly into your workflows.",
-      features: ["API Development", "Microservices Architecture", "Integration Services", "Legacy Modernization"]
+      features: ["API Development", "Microservices Architecture", "Integration Services", "Legacy Modernization"],
+      bgImage: dataBg
     },
     {
       key: "cloud",
       icon: <Globe className="w-8 h-8" />,
       title: "Cloud Solutions",
       description: "Leverage the power of cloud computing for scalable, cost-effective data storage and processing.",
-      features: ["Cloud Migration", "Serverless Architecture", "Multi-cloud Strategy", "Cost Optimization"]
+      features: ["Cloud Migration", "Serverless Architecture", "Multi-cloud Strategy", "Cost Optimization"],
+      bgImage: machineryBg1
     },
     {
       key: "governance",
       icon: <ShieldCheck className="w-8 h-8" />,
       title: "Data Governance",
       description: "Ensure your data is secure, compliant, and maintained at the highest quality standards.",
-      features: ["Security & Compliance", "Data Quality Management", "Access Control", "Audit Trails"]
+      features: ["Security & Compliance", "Data Quality Management", "Access Control", "Audit Trails"],
+      bgImage: engineerBg
     }
   ];
 
@@ -77,6 +87,7 @@ export default function Services() {
               description={service.description}
               features={service.features}
               serviceKey={service.key}
+              bgImage={service.bgImage}
             />
           ))}
         </motion.div>
