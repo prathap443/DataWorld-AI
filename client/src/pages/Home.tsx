@@ -96,7 +96,11 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary blur-[100px] rounded-full" />
+          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-accent blur-[100px] rounded-full" />
+        </div>
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Data Solutions</h2>
@@ -110,7 +114,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10"
           >
             {[
               {
@@ -155,8 +159,12 @@ export default function Home() {
       </section>
 
       {/* Tech Showcase Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary blur-[120px] rounded-full -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent blur-[120px] rounded-full translate-y-1/2" />
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Cutting-Edge Technology Stack</h2>
             <p className="text-lg text-muted-foreground">
@@ -209,8 +217,12 @@ export default function Home() {
 
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.05]">
+          <div className="absolute top-0 right-1/4 w-80 h-80 bg-primary blur-[100px] rounded-full -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent blur-[100px] rounded-full translate-y-1/2" />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6">Ready to innovate?</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
             Whether you need custom AI solutions or training for your team, we're here to help you succeed in the data era.

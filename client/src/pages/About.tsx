@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { Target, Lightbulb, Users } from "lucide-react";
+import techBgImage from "@assets/stock_images/tech_background_data_7f5c1205.jpg";
 
 export default function About() {
   return (
@@ -10,6 +11,7 @@ export default function About() {
       <PageHeader 
         title="About DataWorld" 
         subtitle="Driven by data, powered by intelligence, focused on your success."
+        bgImage={techBgImage}
       />
       
       <main className="container mx-auto px-4 md:px-6 py-24">

@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Brain, Code, BarChart, Server, Globe, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import techBgImage from "@assets/stock_images/tech_background_data_7f3259ae.jpg";
 
 export default function Services() {
   const services = [
@@ -57,6 +58,7 @@ export default function Services() {
       <PageHeader 
         title="Our Expertise" 
         subtitle="End-to-end data and AI solutions designed to propel your business into the future."
+        bgImage={techBgImage}
       />
       
       <main className="container mx-auto px-4 md:px-6 py-24 -mt-20 relative z-20">

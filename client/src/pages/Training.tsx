@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, Clock, Calendar, Users, Zap } from "lucide-react";
 import { Link } from "wouter";
+import techBgImage from "@assets/stock_images/tech_background_data_2c16e47e.jpg";
 
 interface CourseCardProps {
   title: string;
@@ -62,6 +63,7 @@ export default function Training() {
       <PageHeader 
         title="Professional Training" 
         subtitle="Upskill your team with industry-leading courses in Data & AI."
+        bgImage={techBgImage}
       />
       
       <main className="container mx-auto px-4 md:px-6 py-24">
