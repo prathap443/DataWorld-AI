@@ -26,7 +26,7 @@ export function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5"
+        scrolled ? "bg-background/95 backdrop-blur-md shadow-md py-3" : "bg-background/70 backdrop-blur-sm py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -48,7 +48,7 @@ export function Navbar() {
               <Link key={link.name} href={link.href}>
                 <span
                   className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer pb-1 border-b-2 ${
-                    location === link.href ? "text-primary font-semibold border-primary" : "text-foreground/80 border-transparent"
+                    location === link.href ? "text-primary font-semibold border-primary" : "text-foreground border-transparent"
                   }`}
                 >
                   {link.name}
