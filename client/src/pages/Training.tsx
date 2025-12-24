@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Clock, Calendar, Users, Zap } from "lucide-react";
 import { Link } from "wouter";
 import techBgImage from "@assets/stock_images/tech_background_data_2c16e47e.jpg";
+import neuralNetworkBg from "@assets/stock_images/neural_network_ai_ma_0c31227c.jpg";
 
 interface CourseCardProps {
   title: string;
@@ -139,6 +140,54 @@ export default function Training() {
               "System Scalability & Performance"
             ]}
           />
+        </div>
+
+        {/* Tech Stack Section */}
+        <div className="mt-32 mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Technology Stack We Teach</h2>
+            <p className="text-lg text-muted-foreground">
+              Master the most in-demand tools and frameworks used by leading data teams worldwide.
+            </p>
+          </div>
+
+          <div 
+            className="relative rounded-2xl overflow-hidden bg-cover bg-center"
+            style={{ backgroundImage: `url(${neuralNetworkBg})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 to-slate-900/80" />
+            <div className="relative z-10 p-12 md:p-16">
+              <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="text-white">
+                  <h3 className="font-bold text-lg mb-4">Data Engineering</h3>
+                  <ul className="space-y-2 text-sm text-slate-200">
+                    <li>• Apache Spark & Hadoop</li>
+                    <li>• Apache Airflow</li>
+                    <li>• Snowflake & BigQuery</li>
+                    <li>• Python & SQL</li>
+                  </ul>
+                </div>
+                <div className="text-white">
+                  <h3 className="font-bold text-lg mb-4">Machine Learning</h3>
+                  <ul className="space-y-2 text-sm text-slate-200">
+                    <li>• PyTorch & TensorFlow</li>
+                    <li>• Scikit-learn</li>
+                    <li>• NLP & Computer Vision</li>
+                    <li>• MLflow & MLOps</li>
+                  </ul>
+                </div>
+                <div className="text-white">
+                  <h3 className="font-bold text-lg mb-4">Analytics & BI</h3>
+                  <ul className="space-y-2 text-sm text-slate-200">
+                    <li>• Tableau & PowerBI</li>
+                    <li>• Looker & Metabase</li>
+                    <li>• Pandas & NumPy</li>
+                    <li>• Advanced SQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Corporate Training CTA */}

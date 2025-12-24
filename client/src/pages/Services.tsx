@@ -5,6 +5,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { Brain, Code, BarChart, Server, Globe, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import techBgImage from "@assets/stock_images/tech_background_data_7f3259ae.jpg";
+import analyticsBg from "@assets/stock_images/data_analytics_progr_f19847a2.jpg";
 
 export default function Services() {
   const services = [
@@ -79,6 +80,54 @@ export default function Services() {
             />
           ))}
         </motion.div>
+
+        {/* Tech Stack Section */}
+        <div className="mt-32 mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Technology Arsenal</h2>
+            <p className="text-lg text-muted-foreground">
+              Enterprise-grade tools and platforms we use to deliver cutting-edge solutions.
+            </p>
+          </div>
+
+          <div 
+            className="relative rounded-2xl overflow-hidden bg-cover bg-center"
+            style={{ backgroundImage: `url(${analyticsBg})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 to-slate-900/80" />
+            <div className="relative z-10 p-12 md:p-16">
+              <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="text-white">
+                  <h3 className="font-bold text-lg mb-4">Cloud & Infrastructure</h3>
+                  <ul className="space-y-2 text-sm text-slate-200">
+                    <li>• AWS & Google Cloud</li>
+                    <li>• Snowflake & BigQuery</li>
+                    <li>• Databricks</li>
+                    <li>• Kubernetes & Docker</li>
+                  </ul>
+                </div>
+                <div className="text-white">
+                  <h3 className="font-bold text-lg mb-4">AI & Analytics</h3>
+                  <ul className="space-y-2 text-sm text-slate-200">
+                    <li>• TensorFlow & PyTorch</li>
+                    <li>• LLMs & Prompt Engineering</li>
+                    <li>• Advanced Analytics</li>
+                    <li>• Real-time Processing</li>
+                  </ul>
+                </div>
+                <div className="text-white">
+                  <h3 className="font-bold text-lg mb-4">Data Pipeline & Tools</h3>
+                  <ul className="space-y-2 text-sm text-slate-200">
+                    <li>• Apache Spark & Kafka</li>
+                    <li>• dbt & Airflow</li>
+                    <li>• Tableau & PowerBI</li>
+                    <li>• Python & SQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Process Section */}
         <div className="mt-32">
