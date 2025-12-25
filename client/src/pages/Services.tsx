@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import techBgImage from "@assets/stock_images/tech_background_data_7f3259ae.jpg";
 import analyticsBg from "@assets/stock_images/data_analytics_progr_f19847a2.jpg";
 import analyticsBg2 from "@assets/stock_images/data_analytics_progr_bf0d9cfc.jpg";
-import aiBg from "@assets/stock_images/neural_network_machi_745707c9.jpg";
+import aiBg from "@assets/e0d40668-2459-4df9-88bd-fe9f4742b146_1766664424837.jpeg";
 import machineryBg2 from "@assets/stock_images/machinery_industrial_b175bbc4.jpg";
 import governanceBg from "@assets/stock_images/tech_background_data_2c16e47e.jpg";
-import cloudBg from "@assets/stock_images/tech_background_data_7f5c1205.jpg";
+import cloudBg from "@assets/96aed902-1dc6-4823-8738-8f667cd89acd_1766664424837.jpeg";
 import dataBg from "@assets/stock_images/data_analytics_progr_09aa2600.jpg";
 
 export default function Services() {
