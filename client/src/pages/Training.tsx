@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import techBgImage from "@assets/stock_images/tech_background_data_2c16e47e.jpg";
 import neuralNetworkBg from "@assets/stock_images/neural_network_ai_ma_0c31227c.jpg";
 import dataEngineeringBg from "@assets/stock_images/data_engineering_dat_c52cdf3c.jpg";
-import machineryBg2 from "@assets/stock_images/machinery_industrial_b175bbc4.jpg";
+import dataArchitectingBg from "@assets/PHOTO-2025-12-25-12-26-39_1766666004675.jpg";
 import analysisBg from "@assets/stock_images/data_analytics_progr_bf0d9cfc.jpg";
 
 interface CourseCardProps {
@@ -186,7 +186,7 @@ export default function Training() {
               "Cloud Infrastructure Design",
               "System Scalability & Performance"
             ]}
-            bgImage={machineryBg2}
+            bgImage={dataArchitectingBg}
             index={3}
           />
         </motion.div>
