@@ -8,7 +8,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import techBgImage from "@assets/stock_images/tech_background_data_2c16e47e.jpg";
 import neuralNetworkBg from "@assets/stock_images/neural_network_ai_ma_0c31227c.jpg";
-import machineryBg1 from "@assets/stock_images/machinery_industrial_8afc6895.jpg";
+import machineryBg1 from "@assets/ChatGPT_Image_Dec_25,_2025,_12_18_34_PM_1766665139788.png";
 import machineryBg2 from "@assets/stock_images/machinery_industrial_b175bbc4.jpg";
 import analysisBg from "@assets/stock_images/data_analytics_progr_bf0d9cfc.jpg";
 
