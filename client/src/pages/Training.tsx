@@ -10,7 +10,7 @@ import techBgImage from "@assets/stock_images/tech_background_data_2c16e47e.jpg"
 import neuralNetworkBg from "@assets/stock_images/neural_network_ai_ma_0c31227c.jpg";
 import machineryBg1 from "@assets/stock_images/machinery_industrial_8afc6895.jpg";
 import machineryBg2 from "@assets/stock_images/machinery_industrial_b175bbc4.jpg";
-import engineerBg from "@assets/stock_images/engineer_technical_p_76488efb.jpg";
+import analysisBg from "@assets/stock_images/data_analytics_progr_bf0d9cfc.jpg";
 
 interface CourseCardProps {
   title: string;
@@ -170,7 +170,7 @@ export default function Training() {
               "Business Intelligence Strategy",
               "SQL for Analysts"
             ]}
-            bgImage={engineerBg}
+            bgImage={analysisBg}
             index={2}
           />
 

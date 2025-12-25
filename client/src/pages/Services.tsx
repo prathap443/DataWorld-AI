@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import techBgImage from "@assets/stock_images/tech_background_data_7f3259ae.jpg";
 import analyticsBg from "@assets/stock_images/data_analytics_progr_f19847a2.jpg";
 import analyticsBg2 from "@assets/stock_images/data_analytics_progr_bf0d9cfc.jpg";
-import aiBg from "@assets/stock_images/ai_artificial_intell_6d1c9ce2.jpg";
+import aiBg from "@assets/stock_images/neural_network_ai_ma_cb5f9eff.jpg";
 import machineryBg2 from "@assets/stock_images/machinery_industrial_b175bbc4.jpg";
 import governanceBg from "@assets/stock_images/engineer_technical_p_4a4759ae.jpg";
 import cloudBg from "@assets/stock_images/tech_background_data_7f5c1205.jpg";
