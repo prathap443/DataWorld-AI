@@ -6,9 +6,11 @@ import { Brain, Code, BarChart, Server, Globe, ShieldCheck } from "lucide-react"
 import { motion } from "framer-motion";
 import techBgImage from "@assets/stock_images/tech_background_data_7f3259ae.jpg";
 import analyticsBg from "@assets/stock_images/data_analytics_progr_f19847a2.jpg";
-import machineryBg1 from "@assets/stock_images/machinery_industrial_8afc6895.jpg";
+import analyticsBg2 from "@assets/stock_images/data_analytics_progr_bf0d9cfc.jpg";
+import aiBg from "@assets/stock_images/ai_artificial_intell_6d1c9ce2.jpg";
 import machineryBg2 from "@assets/stock_images/machinery_industrial_b175bbc4.jpg";
-import engineerBg from "@assets/stock_images/engineer_technical_p_76488efb.jpg";
+import governanceBg from "@assets/stock_images/engineer_technical_p_4a4759ae.jpg";
+import cloudBg from "@assets/stock_images/tech_background_data_7f5c1205.jpg";
 import dataBg from "@assets/stock_images/data_analytics_progr_09aa2600.jpg";
 
 export default function Services() {
@@ -19,7 +21,7 @@ export default function Services() {
       title: "AI & Machine Learning",
       description: "Develop intelligent systems that learn, adapt, and automate complex tasks to drive efficiency.",
       features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Recommendation Systems"],
-      bgImage: machineryBg1
+      bgImage: aiBg
     },
     {
       key: "data_engineering",
@@ -35,7 +37,7 @@ export default function Services() {
       title: "Data Analytics",
       description: "Turn raw numbers into visual stories and actionable insights for better decision making.",
       features: ["Business Intelligence Dashboards", "Statistical Analysis", "Data Mining", "Reporting Automation"],
-      bgImage: engineerBg
+      bgImage: analyticsBg2
     },
     {
       key: "custom_dev",
@@ -51,7 +53,7 @@ export default function Services() {
       title: "Cloud Solutions",
       description: "Leverage the power of cloud computing for scalable, cost-effective data storage and processing.",
       features: ["Cloud Migration", "Serverless Architecture", "Multi-cloud Strategy", "Cost Optimization"],
-      bgImage: machineryBg1
+      bgImage: cloudBg
     },
     {
       key: "governance",
@@ -59,7 +61,7 @@ export default function Services() {
       title: "Data Governance",
       description: "Ensure your data is secure, compliant, and maintained at the highest quality standards.",
       features: ["Security & Compliance", "Data Quality Management", "Access Control", "Audit Trails"],
-      bgImage: engineerBg
+      bgImage: governanceBg
     }
   ];
 
