@@ -26,7 +26,7 @@ interface CourseCardProps {
 function CourseCard({ title, level, duration, description, modules, popular, bgImage, index = 0 }: CourseCardProps) {
   return (
     <motion.div 
-      className={`flex flex-col h-full bg-card rounded-2xl border ${popular ? 'border-primary shadow-xl shadow-primary/10' : 'border-border shadow-sm hover:shadow-lg'} transition-all duration-300 overflow-hidden`}
+      className={`flex flex-col h-full bg-card rounded-2xl border border-border ${popular ? 'shadow-xl' : 'shadow-sm hover:shadow-lg'} transition-all duration-300 overflow-hidden`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
